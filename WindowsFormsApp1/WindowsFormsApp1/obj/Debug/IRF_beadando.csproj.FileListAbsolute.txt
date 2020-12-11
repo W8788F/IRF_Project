@@ -1,11 +1,11 @@
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\IRF_beadando.csprojAssemblyReference.cache
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\IRF_beadando.csproj.GenerateResource.cache
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\IRF_beadando.csproj.CoreCompileInputs.cache
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\adatok.csv
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\adatok.csv
