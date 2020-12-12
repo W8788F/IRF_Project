@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{35A0F1BD-E45C-4577-A798-3E7032274F6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRF_beadando", "WindowsFormsApp1\IRF_beadando.csproj", "{35A0F1BD-E45C-4577-A798-3E7032274F6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

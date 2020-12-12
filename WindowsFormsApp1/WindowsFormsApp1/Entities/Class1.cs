@@ -15,6 +15,6 @@ namespace WindowsFormsApp1.Entities
         public int jegy { get; set; }
         public int osszszazalek { get; set; }
         public int osszpont { get; set; }
-
     }
+
 }
