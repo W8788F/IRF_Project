@@ -1,1 +1,1 @@
-1
+A feladatomban a 2020-as közép matematika érettségi adatival foglalkozom. A célja, hogy a felhasználó által egy kiválasztott ismérv alapján diagram használatával össze lehessen hasonlítani az eredményeket. A kiválasztott tulajdonsághoz tartozó adatok megjelenítésére két diagramm szerepel. A bal oldalihoz ki lehet választani a megadott ismérvhez tartozó értékek közül egyet, a mellette levő diagram, pedig Timer használatával végig megy az összes többi adaton.
