@@ -8,13 +8,12 @@ namespace WindowsFormsApp1.Entities
 {
     public class erettsegik
     {
-        public string varos { get; set; }
+        public string megye { get; set; }
         public string iskola_tipus { get; set; }
         public string nem { get; set; }
-        public string munkarend { get; set; }
+        public string kepzestipusa { get; set; }
         public int jegy { get; set; }
         public int osszszazalek { get; set; }
         public int osszpont { get; set; }
     }
-
 }

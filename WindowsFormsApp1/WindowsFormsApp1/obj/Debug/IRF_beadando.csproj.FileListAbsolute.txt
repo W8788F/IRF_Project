@@ -9,3 +9,7 @@ C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadan
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\adatok.csv
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\Megyek.csv
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\Iskolatipusa.csv
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\Kepzestipusa.csv
+C:\Users\Máté Gergely\OneDrive - Rombusz Bróker Kft\Máté Gergely\IRF\Beadandó\IRF_Project\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Adatok\Nem.csv
