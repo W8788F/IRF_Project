@@ -101,7 +101,27 @@ namespace WindowsFormsApp1
                 }
 
             }
+            ismervijellemzo.SelectedIndex = 0;
         }
 
+
+        private void jegyatlag()
+        {
+            if (ismervijellemzo.SelectedItem != null)
+            {
+                chart1.Series["Series1"].Points.Clear();
+                double atlag = (from x in Matek
+                             where x.megye == ismervijellemzo.SelectedItem.ToString()
+                             select x.jegy).Average();
+                chart1.Series["Series1"].Points.AddY(atlag);
+                label3.Text = Math.Round(atlag, 2).ToString();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            jegyatlag();
+        }
     }
 }
