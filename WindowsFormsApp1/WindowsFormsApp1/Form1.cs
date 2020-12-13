@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             adatokbetolt();
+            szazalekatlag();
 
         }
 
@@ -149,9 +150,54 @@ namespace WindowsFormsApp1
 
         }
 
+        private void szazalekatlag()
+        {
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Megye")
+            {
+                chart3.Series["Series1"].Points.Clear();
+                double atlagszazalek = (from x in Matek
+                                where x.megye == ismervijellemzo.SelectedItem.ToString()
+                                select x.osszszazalek).Average();
+                chart3.Series["Series1"].Points.AddY(atlagszazalek);
+                label4.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Iskola típus")
+            {
+                chart3.Series["Series1"].Points.Clear();
+                double atlagszazalek = (from x in Matek
+                                where x.iskola_tipus == ismervijellemzo.SelectedItem.ToString()
+                                select x.osszszazalek).Average();
+                chart3.Series["Series1"].Points.AddY(atlagszazalek);
+                label4.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Nem")
+            {
+                chart3.Series["Series1"].Points.Clear();
+                double atlagszazalek = (from x in Matek
+                                where x.nem == ismervijellemzo.SelectedItem.ToString()
+                                select x.osszszazalek).Average();
+                chart3.Series["Series1"].Points.AddY(atlagszazalek);
+                label4.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Képzés típusa")
+            {
+                chart3.Series["Series1"].Points.Clear();
+                double atlagszazalek = (from x in Matek
+                                where x.kepzestipusa == ismervijellemzo.SelectedItem.ToString()
+                                select x.osszszazalek).Average();
+                chart3.Series["Series1"].Points.AddY(atlagszazalek);
+                label4.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             jegyatlag();
+            szazalekatlag();
         }
     }
 }
