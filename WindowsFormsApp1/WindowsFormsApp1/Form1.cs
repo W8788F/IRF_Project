@@ -107,12 +107,42 @@ namespace WindowsFormsApp1
 
         private void jegyatlag()
         {
-            if (ismervijellemzo.SelectedItem != null)
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Megye")
             {
                 chart1.Series["Series1"].Points.Clear();
                 double atlag = (from x in Matek
                              where x.megye == ismervijellemzo.SelectedItem.ToString()
                              select x.jegy).Average();
+                chart1.Series["Series1"].Points.AddY(atlag);
+                label3.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Iskola típus")
+            {
+                chart1.Series["Series1"].Points.Clear();
+                double atlag = (from x in Matek
+                                where x.iskola_tipus == ismervijellemzo.SelectedItem.ToString()
+                                select x.jegy).Average();
+                chart1.Series["Series1"].Points.AddY(atlag);
+                label3.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Nem")
+            {
+                chart1.Series["Series1"].Points.Clear();
+                double atlag = (from x in Matek
+                                where x.nem == ismervijellemzo.SelectedItem.ToString()
+                                select x.jegy).Average();
+                chart1.Series["Series1"].Points.AddY(atlag);
+                label3.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismervijellemzo.SelectedItem != null && ismerv.SelectedItem.ToString() == "Képzés típusa")
+            {
+                chart1.Series["Series1"].Points.Clear();
+                double atlag = (from x in Matek
+                                where x.kepzestipusa == ismervijellemzo.SelectedItem.ToString()
+                                select x.jegy).Average();
                 chart1.Series["Series1"].Points.AddY(atlag);
                 label3.Text = Math.Round(atlag, 2).ToString();
             }
