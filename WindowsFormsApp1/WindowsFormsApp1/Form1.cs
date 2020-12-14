@@ -16,12 +16,20 @@ namespace WindowsFormsApp1
     {
 
         List<erettsegik> Matek = new List<erettsegik>();
+        List<string> megyek = new List<string>();
+        List<string> iskolatipus = new List<string>();
+        List<string> nem = new List<string>();
+        List<string> kepzestipus = new List<string>();
 
         public Form1()
         {
             InitializeComponent();
             adatokbetolt();
             szazalekatlag();
+            megyekmeghivasa();
+            isktipusmeghivasa();
+            nemmeghivasa();
+            kepzestipusmeghivasa();
 
         }
 
@@ -50,61 +58,75 @@ namespace WindowsFormsApp1
 
         private void ismerv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ismervijellemzo.Items.Clear();
+            ismervijellemzo.DataSource = null;
             if (ismerv.SelectedItem.ToString() == "Megye")
             {
-                using (StreamReader sr = new StreamReader("Adatok/Megyek.csv", Encoding.Default))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        var line = sr.ReadLine().Split(';');
-                        ismervijellemzo.Items.Add(line[0]);
-                    }
-                }
-
+                ismervijellemzo.DataSource = megyek;
             }
 
             if (ismerv.SelectedItem.ToString() == "Iskola típus")
             {
-                using (StreamReader sr = new StreamReader("Adatok/Iskolatipusa.csv", Encoding.Default))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        var line = sr.ReadLine().Split(';');
-                        ismervijellemzo.Items.Add(line[0]);
-                    }
-                }
-
+                ismervijellemzo.DataSource = iskolatipus;
             }
 
             if (ismerv.SelectedItem.ToString() == "Nem")
             {
-                using (StreamReader sr = new StreamReader("Adatok/Nem.csv", Encoding.Default))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        var line = sr.ReadLine().Split(';');
-                        ismervijellemzo.Items.Add(line[0]);
-                    }
-                }
-
+                ismervijellemzo.DataSource = nem;
             }
 
             if (ismerv.SelectedItem.ToString() == "Képzés típusa")
             {
-                using (StreamReader sr = new StreamReader("Adatok/Kepzestipusa.csv", Encoding.Default))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        var line = sr.ReadLine().Split(';');
-                        ismervijellemzo.Items.Add(line[0]);
-                    }
-                }
-
+                ismervijellemzo.DataSource = kepzestipus;
             }
-            ismervijellemzo.SelectedIndex = 0;
+            ismervijellemzo.SelectedItem = null;
         }
 
+        private void megyekmeghivasa()
+        {
+            using (StreamReader sr = new StreamReader("Adatok/Megyek.csv", Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    megyek.Add(line[0]);
+                }
+            }
+        }
+
+        private void isktipusmeghivasa()
+        {
+            using (StreamReader sr = new StreamReader("Adatok/Iskolatipusa.csv", Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    iskolatipus.Add(line[0]);
+                }
+            }
+        }
+
+        private void nemmeghivasa()
+        {
+            using (StreamReader sr = new StreamReader("Adatok/Nem.csv", Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    nem.Add(line[0]);
+                }
+            }
+        }
+        private void kepzestipusmeghivasa()
+        {
+            using (StreamReader sr = new StreamReader("Adatok/Kepzestipusa.csv", Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    kepzestipus.Add(line[0]);
+                }
+            }
+        }
 
         private void jegyatlag()
         {
@@ -199,5 +221,17 @@ namespace WindowsFormsApp1
             jegyatlag();
             szazalekatlag();
         }
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+
+            chart2.Series["Series1"].Points.Clear();
+            chart4.Series["Series1"].Points.Clear();
+        }
+
+
     }
 }
