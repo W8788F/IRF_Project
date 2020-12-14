@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
         List<string> iskolatipus = new List<string>();
         List<string> nem = new List<string>();
         List<string> kepzestipus = new List<string>();
+        List<string> csere = new List<string>();
+        int valasztott = 0;
 
         public Form1()
         {
@@ -30,7 +32,6 @@ namespace WindowsFormsApp1
             isktipusmeghivasa();
             nemmeghivasa();
             kepzestipusmeghivasa();
-
         }
 
         private void adatokbetolt()
@@ -58,7 +59,6 @@ namespace WindowsFormsApp1
 
         private void ismerv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ismervijellemzo.DataSource = null;
             if (ismerv.SelectedItem.ToString() == "Megye")
             {
                 ismervijellemzo.DataSource = megyek;
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             {
                 ismervijellemzo.DataSource = kepzestipus;
             }
-            ismervijellemzo.SelectedItem = null;
+            ismervijellemzo.SelectedIndex = 0;
         }
 
         private void megyekmeghivasa()
@@ -220,18 +220,89 @@ namespace WindowsFormsApp1
         {
             jegyatlag();
             szazalekatlag();
+            timer1.Enabled = true;
+
+            if (ismerv.SelectedItem.ToString() == "Megye")
+            {
+                csere = megyek;
+            }
+            if (ismerv.SelectedItem.ToString() == "Iskola típus")
+            {
+                csere = iskolatipus;
+            }
+            if (ismerv.SelectedItem.ToString() == "Nem")
+            {
+                csere = nem;
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Képzés típusa")
+            {
+                csere = kepzestipus;
+            }
         }
-
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-
             chart2.Series["Series1"].Points.Clear();
             chart4.Series["Series1"].Points.Clear();
+
+
+            if (ismerv.SelectedItem.ToString() == "Megye")
+            {
+                double atlag = (from x in Matek
+                                where x.megye == csere[valasztott]
+                                select x.jegy).Average();
+                chart2.Series["Series1"].Points.AddY(atlag);
+                label5.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Iskola típus")
+            {
+                double atlag = (from x in Matek
+                                where x.iskola_tipus == csere[valasztott]
+                                select x.jegy).Average();
+                chart2.Series["Series1"].Points.AddY(atlag);
+                label5.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Nem")
+            {
+                double atlag = (from x in Matek
+                                where x.nem == csere[valasztott]
+                                select x.jegy).Average();
+                chart2.Series["Series1"].Points.AddY(atlag);
+                label5.Text = Math.Round(atlag, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Képzés típusa")
+            {
+                double atlag = (from x in Matek
+                                where x.kepzestipusa == csere[valasztott]
+                                select x.jegy).Average();
+                chart2.Series["Series1"].Points.AddY(atlag);
+                label5.Text = Math.Round(atlag, 2).ToString();
+            }
+
+
+            label7.Text = csere[valasztott].ToString();
+
+            if (csere[valasztott]==csere.Last())
+            {
+                valasztott = 0;
+            }
+            else
+            {
+                valasztott++;
+            }
+
+
         }
 
-
+        private void ismervijellemzo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            valasztott = 0;
+            csere = megyek;
+        }
     }
 }

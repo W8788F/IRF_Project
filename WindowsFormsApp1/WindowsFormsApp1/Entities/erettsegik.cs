@@ -16,4 +16,5 @@ namespace WindowsFormsApp1.Entities
         public int osszszazalek { get; set; }
         public int osszpont { get; set; }
     }
+
 }
