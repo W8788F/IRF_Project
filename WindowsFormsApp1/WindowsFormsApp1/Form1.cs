@@ -248,7 +248,7 @@ namespace WindowsFormsApp1
 
             //Átlag számítás
 
-            if (ismerv.SelectedItem.ToString() == "Megye" && csere.Count == 20)
+            if (csere == megyek)
             {
                 double atlag = (from x in Matek
                                 where x.megye == csere[valasztott]
@@ -257,7 +257,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Iskola típus" && csere.Count == 2)
+            if (csere == iskolatipus)
             {
                 double atlag = (from x in Matek
                                 where x.iskola_tipus == csere[valasztott]
@@ -266,7 +266,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Nem" && csere.Count == 2)
+            if (csere == nem)
             {
                 double atlag = (from x in Matek
                                 where x.nem == csere[valasztott]
@@ -275,7 +275,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Képzés típusa" && csere.Count == 4)
+            if (csere == kepzestipus)
             {
                 double atlag = (from x in Matek
                                 where x.kepzestipusa == csere[valasztott]
@@ -286,7 +286,7 @@ namespace WindowsFormsApp1
 
             //Százalék számítás
 
-            if (ismerv.SelectedItem.ToString() == "Megye" && csere.Count == 20)
+            if (csere == megyek)
             {
                 double atlagszazalek = (from x in Matek
                                         where x.megye == csere[valasztott]
@@ -295,7 +295,7 @@ namespace WindowsFormsApp1
                 label6.Text = Math.Round(atlagszazalek, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Iskola típus" && csere.Count == 2)
+            if (csere == iskolatipus)
             {
                 double atlagszazalek = (from x in Matek
                                         where x.iskola_tipus == csere[valasztott]
@@ -304,7 +304,7 @@ namespace WindowsFormsApp1
                 label6.Text = Math.Round(atlagszazalek, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Nem" && csere.Count == 2)
+            if (csere == nem)
             {
                 double atlagszazalek = (from x in Matek
                                         where x.nem == csere[valasztott]
@@ -313,7 +313,7 @@ namespace WindowsFormsApp1
                 label6.Text = Math.Round(atlagszazalek, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Képzés típusa" && csere.Count == 4)
+            if (csere == kepzestipus)
             {
                 double atlagszazalek = (from x in Matek
                                         where x.kepzestipusa == csere[valasztott]
@@ -338,7 +338,6 @@ namespace WindowsFormsApp1
         {
             timer1.Enabled = false;
             valasztott = 0;
-            csere = megyek;
         }
     }
 }
