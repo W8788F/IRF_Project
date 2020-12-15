@@ -246,8 +246,9 @@ namespace WindowsFormsApp1
             chart2.Series["Series1"].Points.Clear();
             chart4.Series["Series1"].Points.Clear();
 
+            //Átlag számítás
 
-            if (ismerv.SelectedItem.ToString() == "Megye")
+            if (ismerv.SelectedItem.ToString() == "Megye" && csere.Count == 20)
             {
                 double atlag = (from x in Matek
                                 where x.megye == csere[valasztott]
@@ -256,7 +257,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Iskola típus")
+            if (ismerv.SelectedItem.ToString() == "Iskola típus" && csere.Count == 2)
             {
                 double atlag = (from x in Matek
                                 where x.iskola_tipus == csere[valasztott]
@@ -265,7 +266,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Nem")
+            if (ismerv.SelectedItem.ToString() == "Nem" && csere.Count == 2)
             {
                 double atlag = (from x in Matek
                                 where x.nem == csere[valasztott]
@@ -274,7 +275,7 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
-            if (ismerv.SelectedItem.ToString() == "Képzés típusa")
+            if (ismerv.SelectedItem.ToString() == "Képzés típusa" && csere.Count == 4)
             {
                 double atlag = (from x in Matek
                                 where x.kepzestipusa == csere[valasztott]
@@ -283,8 +284,45 @@ namespace WindowsFormsApp1
                 label5.Text = Math.Round(atlag, 2).ToString();
             }
 
+            //Százalék számítás
 
-            label7.Text = csere[valasztott].ToString();
+            if (ismerv.SelectedItem.ToString() == "Megye" && csere.Count == 20)
+            {
+                double atlagszazalek = (from x in Matek
+                                        where x.megye == csere[valasztott]
+                                        select x.osszszazalek).Average();
+                chart4.Series["Series1"].Points.AddY(atlagszazalek);
+                label6.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Iskola típus" && csere.Count == 2)
+            {
+                double atlagszazalek = (from x in Matek
+                                        where x.iskola_tipus == csere[valasztott]
+                                        select x.osszszazalek).Average();
+                chart4.Series["Series1"].Points.AddY(atlagszazalek);
+                label6.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Nem" && csere.Count == 2)
+            {
+                double atlagszazalek = (from x in Matek
+                                        where x.nem == csere[valasztott]
+                                        select x.osszszazalek).Average();
+                chart4.Series["Series1"].Points.AddY(atlagszazalek);
+                label6.Text = Math.Round(atlagszazalek, 2).ToString();
+            }
+
+            if (ismerv.SelectedItem.ToString() == "Képzés típusa" && csere.Count == 4)
+            {
+                double atlagszazalek = (from x in Matek
+                                        where x.kepzestipusa == csere[valasztott]
+                                        select x.osszszazalek).Average();
+                chart4.Series["Series1"].Points.AddY(atlagszazalek);
+                label6.Text = Math.Round(atlagszazalek, 2).ToString();
+             }
+
+                label7.Text = csere[valasztott].ToString();
 
             if (csere[valasztott]==csere.Last())
             {
@@ -294,8 +332,6 @@ namespace WindowsFormsApp1
             {
                 valasztott++;
             }
-
-
         }
 
         private void ismervijellemzo_SelectedIndexChanged(object sender, EventArgs e)
